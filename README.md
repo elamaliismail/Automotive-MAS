@@ -15,7 +15,8 @@ Backend FastAPI
 Agents IA LangGraph
 Dashboard React/Vite
 API REST pour l'intégration externe
- Architecture
+
+Architecture
 ┌─────────────────┐
 │ Dashboard React │
 └────────┬────────┘
