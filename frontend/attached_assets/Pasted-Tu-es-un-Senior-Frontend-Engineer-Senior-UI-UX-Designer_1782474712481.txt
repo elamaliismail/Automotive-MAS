@@ -1,0 +1,455 @@
+Tu es un Senior Frontend Engineer + Senior UI/UX Designer spécialisé dans les applications SaaS modernes.
+
+Ta mission est de créer une interface web PREMIUM pour un système Multi-Agent IA automobile appelé :
+
+AUTOMOTIVE MAS
+
+Le résultat doit être digne d'un produit commercial.
+
+L'objectif est que l'utilisateur pense immédiatement à une application développée par Tesla, Mercedes Digital, Rivian ou OpenAI.
+
+N'utilise PAS Bootstrap.
+
+Utilise uniquement :
+
+- HTML5
+- CSS3 moderne
+- JavaScript ES6
+
+Sépare le code dans :
+
+- index.html
+- style.css
+- app.js
+
+Le code doit être propre, commenté, modulaire et responsive.
+
+--------------------------------------------------
+DESIGN SYSTEM
+--------------------------------------------------
+
+Créer un design moderne inspiré de :
+
+- OpenAI
+- Linear
+- Vercel
+- Tesla Dashboard
+- Apple Human Interface
+
+Style :
+
+• Dark Mode Premium
+
+Palette :
+
+background :
+#0B1220
+
+cards :
+#111827
+
+secondary :
+#1F2937
+
+primary :
+#3B82F6
+
+success :
+#10B981
+
+warning :
+#F59E0B
+
+danger :
+#EF4444
+
+texte :
+#F9FAFB
+
+texte secondaire :
+#9CA3AF
+
+Coins :
+
+16px
+
+Ombres :
+
+glassmorphism léger
+
+Blur
+
+Bordures :
+
+1px rgba(255,255,255,.05)
+
+Police :
+
+Inter
+
+Animations :
+
+250ms ease
+
+Transitions partout.
+
+--------------------------------------------------
+LAYOUT
+--------------------------------------------------
+
+Application plein écran.
+
+Sidebar gauche fixe.
+
+Zone centrale.
+
+Header sticky.
+
+Footer avec input.
+
+Disposition :
+
+---------------------------------------------
+Sidebar | Chat principal
+---------------------------------------------
+
+--------------------------------------------------
+SIDEBAR
+--------------------------------------------------
+
+Carte "Vehicle Context"
+
+Icône voiture.
+
+Titre.
+
+Formulaire :
+
+Marque
+
+Modèle
+
+Année
+
+Kilométrage
+
+Bouton :
+
+Nouveau véhicule
+
+Le bouton vide :
+
+- le formulaire
+
+- l'historique
+
+- le chat
+
+Ajouter un résumé du véhicule sous le formulaire lorsque celui-ci est rempli.
+
+--------------------------------------------------
+HEADER
+--------------------------------------------------
+
+Logo Automotive MAS
+
+Sous-titre
+
+"Multi-Agent Automotive Intelligence"
+
+Statut API :
+
+● Connecté (vert)
+
+● Hors ligne (rouge)
+
+Horloge temps réel.
+
+--------------------------------------------------
+ZONE CHAT
+--------------------------------------------------
+
+Le chat ressemble à ChatGPT.
+
+Messages utilisateur :
+
+à droite
+
+bleu
+
+Messages IA :
+
+à gauche
+
+gris
+
+Chaque réponse IA possède :
+
+badge coloré
+
+Diagnostic
+
+Maintenance
+
+Pièces
+
+Télémétrie
+
+Le badge change automatiquement selon :
+
+P0300 → Diagnostic
+
+entretien → Maintenance
+
+pièce → Pièces
+
+capteur → Télémétrie
+
+Sous chaque réponse :
+
+Correlation ID
+
+timestamp
+
+--------------------------------------------------
+LOADER
+--------------------------------------------------
+
+Pendant l'appel API :
+
+Afficher :
+
+animation de réflexion IA
+
+3 points animés
+
+texte :
+
+Automotive MAS analyse votre demande...
+
+--------------------------------------------------
+MESSAGE IA
+--------------------------------------------------
+
+Les réponses doivent apparaître avec animation :
+
+fade
+
+slide
+
+typing effect
+
+--------------------------------------------------
+INPUT
+--------------------------------------------------
+
+Input moderne.
+
+Placeholder :
+
+Posez une question sur votre véhicule...
+
+Bouton envoyer :
+
+icône avion
+
+Entrée envoie.
+
+Shift+Entrée ajoute une ligne.
+
+--------------------------------------------------
+QUICK ACTIONS
+--------------------------------------------------
+
+Sous le header :
+
+4 grosses cartes modernes.
+
+Avec icône.
+
+Code P0300 moteur qui vibre
+
+Prochain entretien
+
+Plaquettes compatibles
+
+Analyse capteurs
+
+Hover :
+
+élévation
+
+ombre
+
+gradient
+
+--------------------------------------------------
+API
+--------------------------------------------------
+
+POST
+
+http://localhost:8000/query
+
+Body :
+
+{
+    "query":"...",
+    "vehicle_context":{
+        ...
+    }
+}
+
+--------------------------------------------------
+SI API OFFLINE
+--------------------------------------------------
+
+Détecter automatiquement.
+
+Afficher :
+
+Badge Offline
+
+Puis générer une réponse simulée locale.
+
+Exemple :
+
+"Le service API est actuellement indisponible. Voici une analyse simulée..."
+
+--------------------------------------------------
+HISTORIQUE
+--------------------------------------------------
+
+Conserver toute la conversation.
+
+Utiliser :
+
+sessionStorage
+
+Au rechargement :
+
+restaurer automatiquement.
+
+--------------------------------------------------
+RESPONSIVE
+--------------------------------------------------
+
+Desktop
+
+Tablette
+
+Mobile
+
+Sur mobile :
+
+Sidebar rétractable.
+
+Menu hamburger.
+
+--------------------------------------------------
+MICRO-ANIMATIONS
+--------------------------------------------------
+
+Hover boutons
+
+Ripple
+
+Transitions
+
+Fade
+
+Smooth Scroll
+
+Message entrant animé
+
+Boutons Quick Actions animés
+
+--------------------------------------------------
+ACCESSIBILITÉ
+--------------------------------------------------
+
+Contraste AA.
+
+Navigation clavier.
+
+Focus visible.
+
+ARIA labels.
+
+--------------------------------------------------
+BONNES PRATIQUES
+--------------------------------------------------
+
+CSS variables
+
+Architecture modulaire
+
+Aucune duplication
+
+Commentaires
+
+Fonctions JS séparées
+
+Code maintenable
+
+--------------------------------------------------
+BONUS PREMIUM
+--------------------------------------------------
+
+Ajouter également :
+
+✓ Avatar différent selon l'agent
+
+Diagnostic 🔧
+
+Maintenance 🛠
+
+Pièces 📦
+
+Télémétrie 📡
+
+✓ Compteur de messages
+
+✓ Temps de réponse API
+
+✓ Bouton copier réponse
+
+✓ Bouton régénérer
+
+✓ Bouton supprimer un message
+
+✓ Export conversation JSON
+
+✓ Export conversation Markdown
+
+✓ Recherche dans l'historique
+
+✓ Bouton retour en bas
+
+✓ Notifications Toast
+
+✓ Mode plein écran
+
+✓ Drag & Drop pour importer un contexte véhicule JSON
+
+✓ Paramètres (thème, taille police)
+
+✓ Effet Glassmorphism
+
+✓ Dégradés modernes
+
+✓ Icônes Lucide
+
+✓ Aucun framework CSS
+
+--------------------------------------------------
+QUALITÉ ATTENDUE
+--------------------------------------------------
+
+Le résultat doit ressembler à une application SaaS premium commercialisable.
+
+Le niveau de qualité attendu est comparable à ChatGPT, Linear ou Notion.
+
+Ne produis pas un simple formulaire Bootstrap.
+
+Crée une véritable expérience utilisateur moderne.

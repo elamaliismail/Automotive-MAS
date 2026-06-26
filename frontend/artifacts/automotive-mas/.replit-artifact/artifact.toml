@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Automotive MAS"
+version = "1.0.0"
+id = "artifacts/automotive-mas"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23408
+
+[services.development]
+run = "pnpm --filter @workspace/automotive-mas run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/automotive-mas", "run", "build" ]
+publicDir = "artifacts/automotive-mas/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23408"
+BASE_PATH = "/"
